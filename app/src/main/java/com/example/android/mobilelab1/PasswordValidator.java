@@ -1,10 +1,10 @@
 package com.example.android.mobilelab1;
 
-import java.util.function.Predicate;
+public class PasswordValidator {
 
-public class PasswordValidator implements Predicate<String> {
-    @Override
-    public boolean test(String password) {
-        return password.length() > 8;
+    private static final int MIN_PASSWORD_LENGTH = 9;
+
+    public boolean validate(String password) {
+        return password.length() >= MIN_PASSWORD_LENGTH;
     }
 }
